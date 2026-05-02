@@ -61,4 +61,5 @@ body {
     flex-wrap: wrap;
     overflow-wrap: anywhere;
     background-color: white;
+    min-height: 40px;
 }

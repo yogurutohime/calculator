@@ -11,7 +11,14 @@ function multiply(a, b) {
 }
 
 function divide(a, b) {
-    return a / b
+    if (b == 0) {
+        alert("MATH ERROR")
+        clear()
+        return
+    }else {
+        return a / b
+    }
+    
 }
 
 function operate(a, b, operator) {
@@ -22,6 +29,12 @@ function operate(a, b, operator) {
     return operator(+a, +b)
 }
 
+function clear() {
+    a = null
+    b = null
+    operator = null
+    screen.textContent = 0
+}
 let a = null
 let b = null
 let operator = null
@@ -76,17 +89,7 @@ button.addEventListener("click", e => {
                     operator = divide
                 }
             } else if(operator != null) {
-                if (b == null) {
-                    if(e.target.textContent == "+") {
-                        operator = add
-                    } else if(e.target.textContent == "-") {
-                        operator = subtract
-                    } else if(e.target.textContent == "x") {
-                        operator = multiply
-                    } else if(e.target.textContent == "÷") {
-                        operator = divide
-                    }
-                } else if (b != null) {
+                if (b != null) {
                     a = operate(a, b, operator)
                     b = null
                     if (a.toString().includes('.') && a.toString().length > 5) {
@@ -94,6 +97,15 @@ button.addEventListener("click", e => {
                     }else {
                         screen.textContent = a
                     }
+                }
+                if(e.target.textContent == "+") {
+                    operator = add
+                } else if(e.target.textContent == "-") {
+                    operator = subtract
+                } else if(e.target.textContent == "x") {
+                    operator = multiply
+                } else if(e.target.textContent == "÷") {
+                    operator = divide
                 }
             }
             
@@ -105,7 +117,7 @@ button.addEventListener("click", e => {
                 }else {
                     screen.textContent = answer
                 }
-                a = null
+                a = answer
                 b = null
                 operator = null
             }
@@ -134,10 +146,7 @@ button.addEventListener("click", e => {
             }
 
         } else if(e.target.classList.contains('clear')) {
-            a = null
-            b = null
-            operator = null
-            screen.textContent = 0
+            clear()
         }
     }
     })
