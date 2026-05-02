@@ -37,13 +37,13 @@ button.addEventListener("click", e => {
             } else if(operator == null) {
                 a += e.target.textContent
             }
-        }else if(e.target.classList.contains('operator')) {
-            console.log(2)
+        } else if(e.target.classList.contains('operator')) {
+            
         } else if(e.target.classList.contains('equal')) {
             console.log(3)
-        }else if(e.target.classList.contains('delete')) {
+        } else if(e.target.classList.contains('delete')) {
             console.log(4)
-        }else if(e.target.classList.contains('clear')) {
+        } else if(e.target.classList.contains('clear')) {
             console.log(5)
         }
     }
