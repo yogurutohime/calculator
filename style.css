@@ -1,0 +1,47 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    border: 2px solid black;
+}
+
+.buttoncontainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid black;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.button {
+    border: 2px solid black;
+    width: 20px;
+    height: 20px;
+    margin: 10px;
+    padding: 10px;
+    align-self:center;
+    display: flex;
+    justify-content: center;
+}
+
+#delete, #clear {
+    width: 82px;
+}
+
+.screen {
+    width: 230px;
+    height: 60px;
+    border: 2px solid black;
+    align-self: center;
+    margin-top: 10px;
+}
