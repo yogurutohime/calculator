@@ -38,17 +38,29 @@ button.addEventListener("click", e => {
                 b = e.target.textContent
                 screen.textContent = b
             } else if(b != null && operator != null) {
-                if (b == 0 || b == '') {
+                if (b === 0 || b == '') {
                     b = e.target.textContent
                 }else {
-                    b += e.target.textContent
+                    if (e.target.textContent == '.') {
+                        if (!b.includes('.')) {
+                            b += e.target.textContent
+                        }
+                    }else {
+                        b += e.target.textContent
+                    }
                 }
                 screen.textContent = b
             } else if(operator == null) {
                 if (a == null || a == "0") {
                     a = e.target.textContent
                 } else if (a != null) {
-                    a += e.target.textContent
+                    if (e.target.textContent == '.') {
+                        if (!a.includes('.')) {
+                            a += e.target.textContent
+                        }
+                        }else {
+                            a += e.target.textContent
+                    }
                 }
                 screen.textContent = a
             }
