@@ -2,7 +2,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 80vw;
+    width: 100vw;
     height: 80vh;
 }
 
@@ -11,6 +11,8 @@ body {
     align-self: center;
     flex-direction: column;
     border: 2px solid black;
+    background-color:rgb(245, 236, 216);
+    border-radius: 3%;
 }
 
 .buttoncontainer {
@@ -34,20 +36,27 @@ body {
     align-self:center;
     display: flex;
     justify-content: center;
+    background-color:rgba(117, 117, 82, 0.336);
+    border-radius: 10%;
 }
 
 .delete, .clear {
     width: 82px;
+    background-color:rgba(91, 153, 78, 0.521);
 }
 
 .screen {
+    box-sizing:border-box;
     width: 230px;
     height: 60px;
     border: 2px solid black;
     align-self: center;
-    margin: 10px 0px;
+    margin: 20px 0px;
+    margin-top: 30px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: end;
+    padding: 5px;
+    background-color: white;
 }
