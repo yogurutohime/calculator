@@ -89,12 +89,22 @@ button.addEventListener("click", e => {
                 } else if (b != null) {
                     a = operate(a, b, operator)
                     b = null
+                    if (a.toString().includes('.') && a.toString().length > 5) {
+                        screen.textContent = Math.round(a * 10000)/10000
+                    }else {
+                        screen.textContent = a
+                    }
                 }
             }
             
         } else if(e.target.classList.contains('equal')) {
             if (b != null && operator != null){
-                screen.textContent = operate(a, b, operator)
+                answer = operate(a, b, operator)
+                if (answer.toString().includes('.') && answer.toString().length > 5) {
+                    screen.textContent = Math.round(answer * 10000)/10000
+                }else {
+                    screen.textContent = answer
+                }
                 a = null
                 b = null
                 operator = null
